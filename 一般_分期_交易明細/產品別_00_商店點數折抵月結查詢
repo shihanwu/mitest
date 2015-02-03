@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://218.32.217.79:8081/" />
+<title>商店點數折抵月結查詢_產品別</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">商店點數折抵月結查詢_產品別</td></tr>
+</thead><tbody>
+<!--承上操作-->
+<tr>
+	<td>select</td>
+	<td>id=prodid</td>
+	<td>label=00</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='content_result']/table/tbody/tr[2]/td</td>
+	<td>TOTAL總計</td>
+</tr>
+<!--驗證TableResult-->
+<tr>
+	<td>verifyText</td>
+	<td>id=prodid</td>
+	<td>全部--00</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultR']/tbody/tr[2]/td</td>
+	<td>010100028</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultR']/tbody/tr[2]/td[2]</td>
+	<td>11,100,201</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultR']/tbody/tr[2]/td[3]</td>
+	<td>3,179</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultR']/tbody/tr[2]/td[4]</td>
+	<td>9,522,961</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultR']/tbody/tr[2]/td[5]</td>
+	<td>1,577,240</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultR']/tbody/tr[2]/td[6]</td>
+	<td>1,577,240</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultR']/tbody/tr[3]/td</td>
+	<td>一般總計</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultR']/tbody/tr[3]/td[2]</td>
+	<td>11,100,201</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#tableResultR_DETAIL &gt; tbody &gt; tr &gt; td</td>
+	<td>產品</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultR_DETAIL']/tbody/tr/td[2]</td>
+	<td>分攤率</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultR_DETAIL']/tbody/tr/td[3]</td>
+	<td>原始消費金額</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultR_DETAIL']/tbody/tr[2]/td</td>
+	<td>00</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultR_DETAIL']/tbody/tr[2]/td[2]</td>
+	<td>100%</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultR_DETAIL']/tbody/tr[2]/td[3]</td>
+	<td>11,100,201</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultI']/tbody/tr[2]/td</td>
+	<td>015010002</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultI']/tbody/tr[2]/td[2]</td>
+	<td>2,540,015</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultI']/tbody/tr[2]/td[3]</td>
+	<td>288</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultI']/tbody/tr[2]/td[4]</td>
+	<td>2,396,855</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultI']/tbody/tr[2]/td[5]</td>
+	<td>143,160</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultI']/tbody/tr[2]/td[6]</td>
+	<td>143,160</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultI']/tbody/tr[3]/td</td>
+	<td>分期總計</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultI']/tbody/tr[3]/td[2]</td>
+	<td>2,540,015</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultI_DETAIL']/tbody/tr[2]/td</td>
+	<td>00</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultI_DETAIL']/tbody/tr[2]/td[2]</td>
+	<td>100%</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultTotal']/tbody/tr[2]/td</td>
+	<td>TOTAL總計</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultTotal']/tbody/tr[2]/td[2]</td>
+	<td>13,640,216</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultTotal_DETAIL']/tbody/tr[2]/td</td>
+	<td>00</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultTotal_DETAIL']/tbody/tr[2]/td[2]</td>
+	<td>100%</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResultTotal_DETAIL']/tbody/tr[2]/td[3]</td>
+	<td>13,640,216</td>
+</tr>
+<!--驗證DetailTableResult-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content_result']/table/tbody/tr[2]/td</td>
+	<td>TOTAL總計</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content_result']/table/tbody/tr[3]/td</td>
+	<td>一般總計</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content_result']/table/tbody/tr[4]/td</td>
+	<td>分期總計</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content_result']/table/tbody/tr[2]/td[2]</td>
+	<td>13,640,216</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content_result']/table/tbody/tr[3]/td[2]</td>
+	<td>11,100,201</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content_result']/table/tbody/tr[4]/td[2]</td>
+	<td>2,540,015</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content_result']/table/tbody/tr[2]/td[6]</td>
+	<td>1,720,400</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content_result']/table/tbody/tr[3]/td[6]</td>
+	<td>1,577,240</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content_result']/table/tbody/tr[4]/td[6]</td>
+	<td>143,160</td>
+</tr>
+<!--驗證ProdCd_List-->
+<tr>
+	<td>verifyText</td>
+	<td>id=prodid</td>
+	<td>全部--00</td>
+</tr>
+<tr>
+	<td>verifySelectedLabel</td>
+	<td>//select[@id=&quot;prodid&quot;]</td>
+	<td>00</td>
+</tr>
+</tbody></table>
+</body>
+</html>

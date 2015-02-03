@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://218.32.217.79:8081/" />
+<title>商店交易明細查詢</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">商店交易明細查詢</td></tr>
+</thead><tbody>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=商店交易明細查詢</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForAlert</td>
+	<td>Can't do because: undefined</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//*[@id=&quot;updateTime&quot;]</td>
+	<td>glob:系統資料更新時間*</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=merchno</td>
+	<td>0101000282</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billDate</td>
+	<td>2014/01/15</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//*[@id=&quot;tableResult&quot;]/tbody/tr[1]/td[1]</td>
+	<td>glob:卡號*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content_result']/table/tbody/tr/td[5]</td>
+	<td>合計： 總筆數：127 總金額：1,269,999,873</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[2]/td[3]</td>
+	<td>-18,400</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[2]/td[5]</td>
+	<td>41</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[3]/td[3]</td>
+	<td>-13,412</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[3]/td[5]</td>
+	<td>41</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=下十頁</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content_result']/table/tbody/tr/td[5]</td>
+	<td>合計： 總筆數：1876 總金額：3,198,141</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=下十頁</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//*[@id=&quot;pages&quot;]/ul/li[1]/a</td>
+	<td>上十頁</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=上十頁</td>
+	<td>上十頁</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=11</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=20</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=下十頁</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[2]/td[3]</td>
+	<td>6,011</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[11]/td[3]</td>
+	<td>5,705</td>
+</tr>
+<!--檢查賬務區間合法-->
+<tr>
+	<td>click</td>
+	<td>id=bill01</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=starBillDate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=starBillDate</td>
+	<td>2014/01/03</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=endBillDate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=endBillDate</td>
+	<td>2014/01/09</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[1]</td>
+	<td>01/03</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[2]</td>
+	<td>01/04</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[3]</td>
+	<td>01/05</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[4]</td>
+	<td>01/06</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[5]</td>
+	<td>01/07</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[6]</td>
+	<td>01/08</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[7]</td>
+	<td>01/09</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='querydate'])[6]</td>
+	<td></td>
+</tr>
+<!--驗證賬務區間出來數據是否正確-->
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='content_result']/table/tbody/tr/td[5]</td>
+	<td>合計： 總筆數：1876 總金額：3,198,141</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content_result']/table/tbody/tr/td[5]</td>
+	<td>合計： 總筆數：1876 總金額：3,198,141</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[2]/td[3]</td>
+	<td>-18,400</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[2]/td[5]</td>
+	<td>41</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[3]/td[3]</td>
+	<td>-13,412</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[3]/td[5]</td>
+	<td>41</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=下十頁</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content_result']/table/tbody/tr/td[5]</td>
+	<td>合計： 總筆數：1876 總金額：3,198,141</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=下十頁</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//*[@id=&quot;pages&quot;]/ul/li[1]/a</td>
+	<td>上十頁</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=上十頁</td>
+	<td>上十頁</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=11</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=20</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=下十頁</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[2]/td[3]</td>
+	<td>6,011</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[11]/td[3]</td>
+	<td>5,705</td>
+</tr>
+<!--檢查賬務區間超過七天-->
+<tr>
+	<td>click</td>
+	<td>id=bill01</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=starBillDate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=starBillDate</td>
+	<td>2014/01/01</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=endBillDate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=endBillDate</td>
+	<td>2014/01/09</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForAlert</td>
+	<td>起始時間錯誤，請選擇7日內</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

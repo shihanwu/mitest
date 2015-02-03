@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="登入">登入</a></td></tr>
+<tr><td><a href="分期商店交易明細">分期商店交易明細</a></td></tr>
+<tr><td><a href="分期連鎖商店總店賬務查詢">分期連鎖商店總店賬務查詢</a></td></tr>
+<tr><td><a href="分期商店對帳單查詢">分期商店對帳單查詢</a></td></tr>
+<tr><td><a href="商店對帳單查詢">商店對帳單查詢</a></td></tr>
+<tr><td><a href="商店點數折抵月結查詢">商店點數折抵月結查詢</a></td></tr>
+<tr><td><a href="商店點數折抵月結查詢_產品別">產品別_全部_商店點數折抵月結查詢</a></td></tr>
+<tr><td><a href="產品別_00_商店點數折抵月結查詢">產品別_00_商店點數折抵月結查詢</a></td></tr>
+<tr><td><a href="產品別_--_商店點數折抵月結查詢">產品別_--_商店點數折抵月結查詢</a></td></tr>
+<tr><td><a href="交易明細">商店交易明細查詢</a></td></tr>
+
+</tbody></table>
+</body>
+</html>

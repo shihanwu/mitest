@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://218.32.217.79:8081/" />
+<title>分期連鎖商店總店賬務查詢</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">分期連鎖商店總店賬務查詢</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/mi/LoginSvAfter</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=分期連鎖商店總店帳務查詢</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//*[@id=&quot;updateTime&quot;]</td>
+	<td>glob:系統資料更新時間*</td>
+</tr>
+<!--驗證沒有資料有正確跳出alert-->
+<tr>
+	<td>type</td>
+	<td>id=merchno</td>
+	<td>0150001301</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billDate</td>
+	<td>2014/01/01</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForAlert</td>
+	<td>您查詢的日期並無任何資料(ErrorCode:-2)</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://218.32.217.79:8081/" />
+<title>分期商店對帳單查詢</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">分期商店對帳單查詢</td></tr>
+</thead><tbody>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=分期商店對帳單查詢</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>交易明細查詢</td>
+	<td></td>
+</tr>
+<!--驗證查詢資料正確-->
+<tr>
+	<td>type</td>
+	<td>id=merchno</td>
+	<td>0150001301</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billDate</td>
+	<td>2014/09/19</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//*[@id=&quot;MerchInfo&quot;]/tbody/tr/td[1]</td>
+	<td>glob:撥款帳號*</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td.td_alignLeft</td>
+	<td>exact:撥款帳號：822 109*******44</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='detailResult']/tbody/tr[2]/td[2]</td>
+	<td>19,800</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='detailResult']/tbody/tr[2]/td[4]</td>
+	<td>990</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='detailResult']/tbody/tr[2]/td[6]</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='detailResult']/tbody/tr[2]/td[8]</td>
+	<td>-200</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='detailResult']/tbody/tr[2]/td[10]</td>
+	<td>-6</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='detailResult']/tbody/tr[2]/td[12]</td>
+	<td>18,616</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[2]/td</td>
+	<td>015000130</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[2]/td[2]</td>
+	<td>001</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[2]/td[3]</td>
+	<td>9,900</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[3]/td</td>
+	<td>小計</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[3]/td[3]</td>
+	<td>9,900</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[2]/td[10]</td>
+	<td>011一般分期</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[11]/td</td>
+	<td>總計</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[11]/td[3]</td>
+	<td>19,800</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[11]/td[4]</td>
+	<td>990</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[11]/td[5]</td>
+	<td>-200</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='tableResult']/tbody/tr[11]/td[6]</td>
+	<td>-6</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>交易明細查詢</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//a[@id=&quot;ExchangeDetailLink&quot;]/@href</td>
+	<td>/mi/query/installment/ExchangeDetailI.jsp?reqMerchNo=0150001301&amp;reqBillDate=2014/09/19&amp;reqPage=1</td>
+</tr>
+<!--驗證沒有資料有正確跳出alert-->
+<tr>
+	<td>type</td>
+	<td>id=merchno</td>
+	<td>0150001301</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billDate</td>
+	<td>2014/03/26</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForAlert</td>
+	<td>您查詢的日期並無任何資料(ErrorCode:-2)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>交易明細查詢</td>
+	<td></td>
+</tr>
+<!--檢查賬務區間合法-->
+<tr>
+	<td>click</td>
+	<td>id=bill01</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=starBillDate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=starBillDate</td>
+	<td>2014/09/13</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=endBillDate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=endBillDate</td>
+	<td>2014/09/19</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td</td>
+	<td>09/13</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[2]</td>
+	<td>09/14</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[3]</td>
+	<td>09/15</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[4]</td>
+	<td>09/16</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[5]</td>
+	<td>09/17</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[6]</td>
+	<td>09/18</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='result_apply']/table/tbody/tr[2]/td[7]</td>
+	<td>09/19</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='querydate'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//*[@id=&quot;content_result&quot;]/table/tbody/tr[1]/td[1]</td>
+	<td>glob:撥款帳號*</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>交易明細查詢</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyAttribute</td>
+	<td>//a[@id=&quot;ExchangeDetailLink&quot;]/@href</td>
+	<td>/mi/query/installment/ExchangeDetailI.jsp?reqMerchNo=0150001301&amp;reqBillDate=20140919&amp;reqPage=1</td>
+</tr>
+<!--驗證點選右上方『交易明細查詢』資料正確-->
+
+</tbody></table>
+</body>
+</html>
